@@ -47,7 +47,7 @@ async def skip(ctx):
         voice_client.stop()
         if queue:
             source, info = queue.pop(0)
-            vc.play(source)
+            voice_client.play(source)
             await ctx.send(f"Aktualnie grane {info['title']} z kolejki.")
     else:
         await ctx.send("Nie ma żadnych piosenek w kolejce.")
