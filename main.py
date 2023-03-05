@@ -7,6 +7,7 @@ client = discord.Client()
 
 queue = []
 
+#play command
 @bot.command()
 async def play(ctx, url):
     voice_channel = ctx.author.voice.channel
@@ -38,6 +39,7 @@ async def play(ctx, url):
         vc.play(source)
         await ctx.send(f"Aktualnie grane {info['title']}")
 
+#skip command
 @bot.command()
 async def skip(ctx):
     voice_client = ctx.guild.voice_client
@@ -49,7 +51,8 @@ async def skip(ctx):
             await ctx.send(f"Aktualnie grane {info['title']} z kolejki.")
     else:
         await ctx.send("Nie ma żadnych piosenek w kolejce.")
-  
+
+#stop command  
 @bot.command()
 async def stop(ctx):
     voice_client = ctx.guild.voice_client
@@ -57,9 +60,10 @@ async def stop(ctx):
         voice_client.stop()
     await voice_client.disconnect()
 
+#help command
 @bot.command()
 async def help(ctx):
     ctx.send(f"Bot posiada aktualnie tylko komendy play i stop.")
 
-    
-bot.run('')
+
+bot.run('MTA4MTk3NDAwMjY4NTMyNTQzMw.Gi0Jld.Ifcj3sVSSiMCHX4ZWzgX5PLcVJJMM5-A77cqRs')
