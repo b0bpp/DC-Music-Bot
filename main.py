@@ -66,4 +66,4 @@ async def help(ctx):
     ctx.send(f"Bot posiada aktualnie tylko komendy play i stop.")
 
 
-bot.run('MTA4MTk3NDAwMjY4NTMyNTQzMw.Gi0Jld.Ifcj3sVSSiMCHX4ZWzgX5PLcVJJMM5-A77cqRs')
+bot.run('TOKEN')
